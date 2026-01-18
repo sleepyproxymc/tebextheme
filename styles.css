@@ -1,0 +1,18 @@
+:root {
+  --bg: #0e0e14;
+  --card: #161622;
+  --primary: #ff4da6;
+  --text: #eaeaf0;
+  --radius: 12px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+}
+
+.package {
+  background: var(--card);
+  border-radius: var(--radius);
+}
