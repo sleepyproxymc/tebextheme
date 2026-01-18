@@ -1,8 +1,30 @@
-/* ================================
-   CUBE-STYLE TEBEX THEME
-   ================================ */
+/* ===============================
+   FORCE TEBEX OVERRIDE RESET
+   =============================== */
+html, body {
+  background: #0b0f1a !important;
+  color: #eef1ff !important;
+  font-family: Inter, system-ui, sans-serif !important;
+}
 
-/* ---------- Design System ---------- */
+/* Remove default white panels */
+.panel,
+.panel-default,
+.content,
+.content-wrapper,
+.sidebar,
+.footer,
+.navbar,
+.container,
+.container-fluid {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ===============================
+   DESIGN SYSTEM
+   =============================== */
 :root {
   --bg-main: #0b0f1a;
   --bg-card: #131a2a;
@@ -20,112 +42,117 @@
   --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
 }
 
-/* ---------- Global ---------- */
-body {
-  background: var(--bg-main) !important;
-  color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar {
+  background: rgba(11,15,26,.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
+/* ===============================
+   LINKS
+   =============================== */
 a {
-  color: var(--accent-2);
+  color: var(--accent-2) !important;
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+a:hover {
+  text-decoration: underline;
 }
 
-/* ---------- Navbar ---------- */
-.navbar {
-  background: rgba(11,15,26,.8) !important;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  box-shadow: none;
+/* ===============================
+   SIDEBAR
+   =============================== */
+.sidebar {
+  background: var(--bg-card) !important;
+  border-radius: var(--radius-lg);
+  padding: 16px;
 }
 
-/* ---------- Cards / Panels ---------- */
+/* ===============================
+   CARDS / PANELS
+   =============================== */
 .panel,
 .package,
 .panel-package,
 .card {
   background: var(--bg-card) !important;
   border-radius: var(--radius-lg);
-  border: none !important;
+  padding: 16px;
   box-shadow: var(--shadow-soft);
 }
 
-/* ---------- Package Cards ---------- */
+/* ===============================
+   PACKAGE CARDS
+   =============================== */
 .package {
-  padding: 18px;
-  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, background .25s ease;
 }
 
 .package:hover {
   transform: translateY(-6px);
   background: var(--bg-card-hover);
-  box-shadow: 0 18px 40px rgba(0,0,0,.45);
 }
 
-/* ---------- Buttons ---------- */
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn,
 .btn-primary,
 .btn-success {
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important;
-  border-radius: var(--radius-md);
   border: none !important;
-  font-weight: 600;
-  padding: 10px 18px;
-}
-
-.btn-primary:hover,
-.btn-success:hover {
-  filter: brightness(1.08);
-}
-
-/* ---------- Secondary Buttons ---------- */
-.btn-secondary,
-.btn-default {
-  background: rgba(255,255,255,.06) !important;
   border-radius: var(--radius-md);
-  border: none;
-  color: var(--text-main);
+  font-weight: 600;
+  color: #fff !important;
 }
 
-/* ---------- Text Muted ---------- */
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ===============================
+   TEXT
+   =============================== */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .text-muted,
 .small,
 .help-block {
   color: var(--text-muted) !important;
 }
 
-/* ---------- Inputs ---------- */
+/* ===============================
+   INPUTS
+   =============================== */
 input,
 select,
 textarea {
   background: var(--bg-card) !important;
-  color: var(--text-main);
+  color: var(--text-main) !important;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255,255,255,.08);
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--accent-1);
-}
-
-/* ---------- Footer ---------- */
+/* ===============================
+   FOOTER
+   =============================== */
 .footer {
-  background: transparent !important;
   color: var(--text-muted);
   border-top: 1px solid rgba(255,255,255,.06);
 }
 
-/* ---------- Mobile ---------- */
+/* ===============================
+   MOBILE
+   =============================== */
 @media (max-width: 768px) {
-  .package {
+  .sidebar {
     margin-bottom: 16px;
   }
 }
