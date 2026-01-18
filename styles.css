@@ -1,3 +1,7 @@
+html {
+  filter: invert(1) !important;
+}
+
 /* ===============================
    FORCE TEBEX OVERRIDE RESET
    =============================== */
